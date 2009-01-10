@@ -49,6 +49,13 @@ module Calendar
                 end
               end
             end
+            if weeks.size == 4
+              doc.tr do
+                doc.td :class => "short_month", :colspan => 7 do |cell|
+                  cell << "&nbsp;"
+                end
+              end
+            end
           end
         end
       end
