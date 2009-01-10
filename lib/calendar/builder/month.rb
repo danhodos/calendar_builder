@@ -29,7 +29,7 @@ module Calendar
             end
             doc.tr do
               days_of_week.each do |day|
-                doc.th day.strftime(options[:day_label_format]),
+                doc.th day.strftime(options[:day_label_format]).first,
                   :class => Proxy.new(day, self).css_classes.join(" ")
               end
             end
